@@ -13,18 +13,16 @@ type Item = {
   image?: string;
 };
 
-const PIZZA_IMG = "/pizza-hero.jpg";
-
 const categories: { id: string; title: string; subtitle: string; items: Item[] }[] = [
   {
     id: "premium",
     title: "Premium Pizzák",
     subtitle: "A séf prémium különlegességei — szarvasgombával, gorgonzolával, ibériai sonkával",
     items: [
-      { name: "Tartufissimo", desc: "Mascarponés szarvasgomba-krém, olvadt mozzarella, szarvasgombás mortadella, pirított shimeji gomba, friss parmezán forgács (1, 8)", emoji: "🍕", badge: "Premium", image: PIZZA_IMG, price: 4550 },
-      { name: "Bianco Supremo Piccante", desc: "Mascarponéval lágyított porcinis-szarvasgombakrém, mozzarella, markáns Gorgonzola, pikáns Spianata piccante szalámi, frissen reszelt Grana Padano (1, 7)", emoji: "🍕", badge: "Csípős", image: PIZZA_IMG, price: 4550 },
-      { name: "Fuego Ibérico", desc: "Pikáns paradicsomszósz, olvadó mozzarella, füstös chorizo, prémium serrano sonka, szárított paradicsom, fekete olíva, chili olaj (1, 7, 9)", emoji: "🌶️", badge: "Premium", image: PIZZA_IMG, price: 4550 },
-      { name: "Nduja Dolce Fuoco", desc: "Paradicsomszósz, mézen futtatott fokhagyma, bazsalikom, mozzarella, csípős 'nduja kolbászkrém, bufala mozzarella, parmezán, méz (1, 7)", emoji: "🔥", badge: "Új", image: PIZZA_IMG, price: 4550 },
+      { name: "Tartufissimo", desc: "Mascarponés szarvasgomba-krém, olvadt mozzarella, szarvasgombás mortadella, pirított shimeji gomba, friss parmezán forgács (1, 8)", emoji: "🍕", badge: "Premium", image: "/menu/tartufissimo.png", price: 4550 },
+      { name: "Bianco Supremo Piccante", desc: "Mascarponéval lágyított porcinis-szarvasgombakrém, mozzarella, markáns Gorgonzola, pikáns Spianata piccante szalámi, frissen reszelt Grana Padano (1, 7)", emoji: "🍕", badge: "Csípős", image: "/menu/bianco-supremo.jpeg", price: 4550 },
+      { name: "Fuego Ibérico", desc: "Pikáns paradicsomszósz, olvadó mozzarella, füstös chorizo, prémium serrano sonka, szárított paradicsom, fekete olíva, chili olaj (1, 7, 9)", emoji: "🌶️", badge: "Premium", image: "/menu/fuego-iberico.jpeg", price: 4550 },
+      { name: "Nduja Dolce Fuoco", desc: "Paradicsomszósz, mézen futtatott fokhagyma, bazsalikom, mozzarella, csípős 'nduja kolbászkrém, bufala mozzarella, parmezán, méz (1, 7)", emoji: "🔥", badge: "Új", image: "/menu/nduja.jpeg", price: 4550 },
     ],
   },
   {
@@ -32,31 +30,31 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
     title: "Klasszikus Pizzák",
     subtitle: "Eredeti olasz receptek — fatüzelésű kemencében, Fior di Latte mozzarellával",
     items: [
-      { name: "01. Marinara", desc: "Paradicsomszósz, fokhagyma, bazsalikom (1)", emoji: "🍕", image: PIZZA_IMG, price: 2450 },
-      { name: "02. Margherita", desc: "Paradicsomszósz, Fior di latte mozzarella, mozzarella golyó, bazsalikom (1, 7)", emoji: "🧀", badge: "Kedvenc", image: PIZZA_IMG, price: 2750 },
-      { name: "03. Prosciutto Cotto", desc: "Paradicsomszósz, Fior di latte mozzarella, sonka (1, 7)", emoji: "🥓", image: PIZZA_IMG, price: 2890 },
-      { name: "04. Prosciutto Cotto e Funghi", desc: "Paradicsomszósz, Fior di latte mozzarella, sonka, gomba (1, 7)", emoji: "🍄", image: PIZZA_IMG, price: 2990 },
-      { name: "05. Prosciutto di Parma e Rucola", desc: "Paradicsomszósz, Fior di latte mozzarella, Pármai sonka, rucola, koktélparadicsom, parmezán (1, 7)", emoji: "🌿", image: PIZZA_IMG, price: 3690 },
-      { name: "06. Milano", desc: "Paradicsomszósz, Fior di latte mozzarella, nápolyi szalámi (1, 7)", emoji: "🍕", image: PIZZA_IMG, price: 2990 },
-      { name: "07. Salame Piccante", desc: "Paradicsomszósz, Fior di latte mozzarella, Spianata Piccante szalámi, jalapeño paprika (1, 7)", emoji: "🌶️", badge: "Csípős", image: PIZZA_IMG, price: 3190 },
-      { name: "08. Tonno e Cipolla", desc: "Paradicsomszósz, Fior di latte mozzarella, tonhal, lilahagyma, olívabogyó (1, 4, 7)", emoji: "🐟", image: PIZZA_IMG, price: 3390 },
-      { name: "10. Quattro Formaggi", desc: "Paradicsomszósz, Fior di latte mozzarella, Gorgonzola, Feta, Parmezán (1, 7)", emoji: "🧀", image: PIZZA_IMG, price: 3350 },
-      { name: "11. Nanni", desc: "Paradicsomszósz, Fior di latte mozzarella, Ricotta, pisztáciás mortadella (1, 7, 8)", emoji: "💚", image: PIZZA_IMG, price: 3350 },
-      { name: "12. Capricciosa", desc: "Paradicsomszósz, Fior di latte mozzarella, sonka, gomba, articsóka, olívabogyó (1, 7)", emoji: "🍕", image: PIZZA_IMG, price: 3350 },
-      { name: "13. Calzone", desc: "Félbehajtott pizza: paradicsomszósz, Fior di latte mozzarella, sonka, gomba, kukorica (1, 7)", emoji: "🥟", image: PIZZA_IMG, price: 3390 },
-      { name: "14. Concettina", desc: "Paradicsomszósz, Fior di latte mozzarella, Milano szalámi, sonka, gomba, kukorica (1, 7)", emoji: "🍕", image: PIZZA_IMG, price: 3590 },
-      { name: "15. Ungherese", desc: "Fokhagymás tejföl, Fior di Latte mozzarella, paprikás kolbász, bacon, lilahagyma, paprika (1, 7)", emoji: "🇭🇺", image: PIZZA_IMG, price: 3390 },
-      { name: "16. Greco", desc: "Fokhagymás tejföl, Fior di Latte mozzarella, gyros hús, Feta sajt (1, 7)", emoji: "🇬🇷", image: PIZZA_IMG, price: 3490 },
-      { name: "17. Mexicana", desc: "Paradicsomszósz, Fior di latte mozzarella, sonka, vörösbab, kukorica (1, 7)", emoji: "🌽", image: PIZZA_IMG, price: 3290 },
-      { name: "18. Vegetariana", desc: "Paradicsomszósz, Fior di latte mozzarella, grillezett zöldségek (1, 7)", emoji: "🥦", image: PIZZA_IMG, price: 3390 },
-      { name: "19. Pesca", desc: "Paradicsomszósz, Fior di latte mozzarella, sonka, őszibarack (1, 7)", emoji: "🍑", image: PIZZA_IMG, price: 3390 },
-      { name: "21. Pulled Pork e Cipolla", desc: "BBQ krémes alap, tépett disznó, vörös Cheddar sajt, lilahagyma (1, 7)", emoji: "🐷", image: PIZZA_IMG, price: 3650 },
-      { name: "22. Grande e Rustica", desc: "Paradicsomos alap, főtt sonka, füstölt bacon, salsiccia, kukorica, füstölt sajt (1, 7)", emoji: "🍕", image: PIZZA_IMG, price: 3650 },
-      { name: "22. Grande e Rustica — Családi", desc: "Mint a klasszikus, mozzarellával — családi méretben (1, 7)", emoji: "👨‍👩‍👧", image: PIZZA_IMG, price: 5790 },
-      { name: "23. Pizza Kebab", desc: "Kapros tejfölös alap, Fior di Latte mozzarella, borjú kebabhús, lilahagyma, paradicsom (1, 7)", emoji: "🥙", image: PIZZA_IMG, price: 3650 },
-      { name: "23. Pizza Kebab — Családi", desc: "Kebab pizza családi méretben (1, 7)", emoji: "👨‍👩‍👧", image: PIZZA_IMG, price: 5790 },
-      { name: "24. Családi 2 feltétes", desc: "Paradicsomszósz, Fior di Latte mozzarella, 2 szabadon választott feltét — családi méret (1, 7)", emoji: "🍕", image: PIZZA_IMG, price: 5150 },
-      { name: "Akciós Páros Ajánlat", desc: "Két szabadon választott klasszikus pizza — csak készpénzes fizetésnél (1, 7)", emoji: "🎉", badge: "Akció", image: PIZZA_IMG, price: 4990 },
+      { name: "01. Marinara", desc: "Paradicsomszósz, fokhagyma, bazsalikom (1)", emoji: "🍕", image: "/menu/marinara.jpg", price: 2450 },
+      { name: "02. Margherita", desc: "Paradicsomszósz, Fior di latte mozzarella, mozzarella golyó, bazsalikom (1, 7)", emoji: "🧀", badge: "Kedvenc", image: "/menu/margherita.jpg", price: 2750 },
+      { name: "03. Prosciutto Cotto", desc: "Paradicsomszósz, Fior di latte mozzarella, sonka (1, 7)", emoji: "🥓", image: "/menu/prosciutto-cotto.jpg", price: 2890 },
+      { name: "04. Prosciutto Cotto e Funghi", desc: "Paradicsomszósz, Fior di latte mozzarella, sonka, gomba (1, 7)", emoji: "🍄", image: "/menu/cotto-funghi.jpg", price: 2990 },
+      { name: "05. Prosciutto di Parma e Rucola", desc: "Paradicsomszósz, Fior di latte mozzarella, Pármai sonka, rucola, koktélparadicsom, parmezán (1, 7)", emoji: "🌿", image: "/menu/parma-rucola.jpg", price: 3690 },
+      { name: "06. Milano", desc: "Paradicsomszósz, Fior di latte mozzarella, nápolyi szalámi (1, 7)", emoji: "🍕", image: "/menu/milano.jpg", price: 2990 },
+      { name: "07. Salame Piccante", desc: "Paradicsomszósz, Fior di latte mozzarella, Spianata Piccante szalámi, jalapeño paprika (1, 7)", emoji: "🌶️", badge: "Csípős", image: "/menu/salame-piccante.jpg", price: 3190 },
+      { name: "08. Tonno e Cipolla", desc: "Paradicsomszósz, Fior di latte mozzarella, tonhal, lilahagyma, olívabogyó (1, 4, 7)", emoji: "🐟", image: "/menu/tonno.jpg", price: 3390 },
+      { name: "10. Quattro Formaggi", desc: "Paradicsomszósz, Fior di latte mozzarella, Gorgonzola, Feta, Parmezán (1, 7)", emoji: "🧀", image: "/menu/quattro-formaggi.jpg", price: 3350 },
+      { name: "11. Nanni", desc: "Paradicsomszósz, Fior di latte mozzarella, Ricotta, pisztáciás mortadella (1, 7, 8)", emoji: "💚", image: "/menu/nanni.jpg", price: 3350 },
+      { name: "12. Capricciosa", desc: "Paradicsomszósz, Fior di latte mozzarella, sonka, gomba, articsóka, olívabogyó (1, 7)", emoji: "🍕", image: "/menu/capricciosa.jpg", price: 3350 },
+      { name: "13. Calzone", desc: "Félbehajtott pizza: paradicsomszósz, Fior di latte mozzarella, sonka, gomba, kukorica (1, 7)", emoji: "🥟", image: "/menu/capricciosa.jpg", price: 3390 },
+      { name: "14. Concettina", desc: "Paradicsomszósz, Fior di latte mozzarella, Milano szalámi, sonka, gomba, kukorica (1, 7)", emoji: "🍕", image: "/menu/concettina.jpg", price: 3590 },
+      { name: "15. Ungherese", desc: "Fokhagymás tejföl, Fior di Latte mozzarella, paprikás kolbász, bacon, lilahagyma, paprika (1, 7)", emoji: "🇭🇺", image: "/menu/ungherese.jpg", price: 3390 },
+      { name: "16. Greco", desc: "Fokhagymás tejföl, Fior di Latte mozzarella, gyros hús, Feta sajt (1, 7)", emoji: "🇬🇷", image: "/menu/greco.jpg", price: 3490 },
+      { name: "17. Mexicana", desc: "Paradicsomszósz, Fior di latte mozzarella, sonka, vörösbab, kukorica (1, 7)", emoji: "🌽", image: "/menu/mexicana.jpg", price: 3290 },
+      { name: "18. Vegetariana", desc: "Paradicsomszósz, Fior di latte mozzarella, grillezett zöldségek (1, 7)", emoji: "🥦", image: "/menu/vegetariana.jpg", price: 3390 },
+      { name: "19. Pesca", desc: "Paradicsomszósz, Fior di latte mozzarella, sonka, őszibarack (1, 7)", emoji: "🍑", image: "/menu/pesca.jpg", price: 3390 },
+      { name: "21. Pulled Pork e Cipolla", desc: "BBQ krémes alap, tépett disznó, vörös Cheddar sajt, lilahagyma (1, 7)", emoji: "🐷", image: "/menu/pulled-pork.jpg", price: 3650 },
+      { name: "22. Grande e Rustica", desc: "Paradicsomos alap, főtt sonka, füstölt bacon, salsiccia, kukorica, füstölt sajt (1, 7)", emoji: "🍕", image: "/menu/grande-rustica.png", price: 3650 },
+      { name: "22. Grande e Rustica — Családi", desc: "Mint a klasszikus, mozzarellával — családi méretben (1, 7)", emoji: "👨‍👩‍👧", image: "/menu/grande-rustica.png", price: 5790 },
+      { name: "23. Pizza Kebab", desc: "Kapros tejfölös alap, Fior di Latte mozzarella, borjú kebabhús, lilahagyma, paradicsom (1, 7)", emoji: "🥙", image: "/menu/kebab.jpeg", price: 3650 },
+      { name: "23. Pizza Kebab — Családi", desc: "Kebab pizza családi méretben (1, 7)", emoji: "👨‍👩‍👧", image: "/menu/kebab.jpeg", price: 5790 },
+      { name: "24. Családi 2 feltétes", desc: "Paradicsomszósz, Fior di Latte mozzarella, 2 szabadon választott feltét — családi méret (1, 7)", emoji: "🍕", image: "/menu/margherita.jpg", price: 5150 },
+      { name: "Akciós Páros Ajánlat", desc: "Két szabadon választott klasszikus pizza — csak készpénzes fizetésnél (1, 7)", emoji: "🎉", badge: "Akció", image: "/menu/paros.jpeg", price: 4990 },
     ],
   },
   {
@@ -64,10 +62,10 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
     title: "Sült Tészták",
     subtitle: "Durumtészta, olvadt sajtbunda alatt — friss olasz ízvilág",
     items: [
-      { name: "Bolognese Sült Tészta", desc: "Durumtészta, Bolognai ragu, mozzarella, parmezán (1, 7)", emoji: "🍝", price: 2530 },
-      { name: "Milanese Sült Tészta", desc: "Durumtészta, milánói ragu, mozzarella, parmezán (1, 7)", emoji: "🍝", price: 2950 },
-      { name: "Pesto Con Pollo", desc: "Durumtészta, csirkemell, pesto, parmezán, mozzarella (1, 7, 8)", emoji: "🌿", price: 2950 },
-      { name: "Quattro Formaggi (Mac'n Cheese)", desc: "Durumtészta, mozzarella, cheddar, füstölt sajt, parmezán (1, 7)", emoji: "🧀", price: 2950 },
+      { name: "Bolognese Sült Tészta", desc: "Durumtészta, Bolognai ragu, mozzarella, parmezán (1, 7)", emoji: "🍝", image: "/menu/bolognese.jpeg", price: 2530 },
+      { name: "Milanese Sült Tészta", desc: "Durumtészta, milánói ragu, mozzarella, parmezán (1, 7)", emoji: "🍝", image: "/menu/bolognese.jpeg", price: 2950 },
+      { name: "Pesto Con Pollo", desc: "Durumtészta, csirkemell, pesto, parmezán, mozzarella (1, 7, 8)", emoji: "🌿", image: "/menu/pesto-pollo.jpeg", price: 2950 },
+      { name: "Quattro Formaggi (Mac'n Cheese)", desc: "Durumtészta, mozzarella, cheddar, füstölt sajt, parmezán (1, 7)", emoji: "🧀", image: "/menu/pesto-pollo.jpeg", price: 2950 },
     ],
   },
   {
@@ -75,12 +73,12 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
     title: "Saláták & Gyros",
     subtitle: "Könnyű falatok és laktató tálak friss hozzávalókból",
     items: [
-      { name: "Cézár Saláta", desc: "Jégsaláta, uborka, paradicsom, lilahagyma, kaliforniai paprika, parmezán, sült fűszeres csirkecsíkok + választható öntet", emoji: "🥗", price: 2800 },
-      { name: "Friss Kevert Saláta", desc: "Jégsaláta, uborka, paradicsom, lilahagyma, kaliforniai paprika + olívaolaj vagy balzsamecet", emoji: "🥬", price: 1600 },
-      { name: "Görög Saláta", desc: "Paradicsom, uborka, lilahagyma, olívabogyó, feta, olívaolaj, bazsalikom (7)", emoji: "🇬🇷", price: 2700 },
-      { name: "Gyros Tál", desc: "Gyros hús, sült krumpli, jégsaláta, uborka, paradicsom, lilahagyma, kaliforniai paprika + választható öntet", emoji: "🥙", price: 2850 },
-      { name: "Sült Kebab Tál", desc: "Sült krumpli, sült kebab hús, sajt, jégsaláta, uborka, paradicsom, lilahagyma, kaliforniai paprika + választható öntet (7)", emoji: "🍖", price: 2990 },
-      { name: "Tonhal Saláta", desc: "Jégsaláta, tonhal, kaliforniai paprika, paradicsom, lilahagyma, madársaláta, olívaolaj, citromlé (4)", emoji: "🐟", price: 2700 },
+      { name: "Cézár Saláta", desc: "Jégsaláta, uborka, paradicsom, lilahagyma, kaliforniai paprika, parmezán, sült fűszeres csirkecsíkok + választható öntet", emoji: "🥗", image: "/menu/cezar.jpg", price: 2800 },
+      { name: "Friss Kevert Saláta", desc: "Jégsaláta, uborka, paradicsom, lilahagyma, kaliforniai paprika + olívaolaj vagy balzsamecet", emoji: "🥬", image: "/menu/kevert-salata.jpg", price: 1600 },
+      { name: "Görög Saláta", desc: "Paradicsom, uborka, lilahagyma, olívabogyó, feta, olívaolaj, bazsalikom (7)", emoji: "🇬🇷", image: "/menu/gorog.jpg", price: 2700 },
+      { name: "Gyros Tál", desc: "Gyros hús, sült krumpli, jégsaláta, uborka, paradicsom, lilahagyma, kaliforniai paprika + választható öntet", emoji: "🥙", image: "/menu/gyros.jpg", price: 2850 },
+      { name: "Sült Kebab Tál", desc: "Sült krumpli, sült kebab hús, sajt, jégsaláta, uborka, paradicsom, lilahagyma, kaliforniai paprika + választható öntet (7)", emoji: "🍖", image: "/menu/kebab-tal.jpg", price: 2990 },
+      { name: "Tonhal Saláta", desc: "Jégsaláta, tonhal, kaliforniai paprika, paradicsom, lilahagyma, madársaláta, olívaolaj, citromlé (4)", emoji: "🐟", image: "/menu/tonhal-salata.jpg", price: 2700 },
     ],
   },
   {
@@ -88,12 +86,12 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
     title: "Desszertek & Finomságok",
     subtitle: "Édes befejezés — ropogós churros és olasz ihletésű sütik",
     items: [
-      { name: "Churros Csokoládé öntettel", desc: "Frissen sütött ropogós churros, belga csokoládé öntettel (1, 7)", emoji: "🍫", price: 1490 },
-      { name: "Churros Szamóca öntettel", desc: "Frissen sütött ropogós churros, édes szamóca öntettel (1, 7)", emoji: "🍓", price: 1490 },
-      { name: "PisztaCiao", desc: "Krémes pisztáciakrém, fehércsoki, tört pisztácia (1, 7, 8)", emoji: "💚", badge: "Kedvenc", price: 2990 },
-      { name: "Sajttorta Szamóca öntettel", desc: "Lágy sajttorta, friss szamóca öntettel (1, 3, 7)", emoji: "🍰", price: 1290 },
-      { name: "Extra Csoki öntet", desc: "Adagnyi belga csokoládé öntet (7)", emoji: "🍫", price: 350 },
-      { name: "Extra Szamóca öntet", desc: "Adagnyi szamóca öntet", emoji: "🍓", price: 350 },
+      { name: "Churros Csokoládé öntettel", desc: "Frissen sütött ropogós churros, belga csokoládé öntettel (1, 7)", emoji: "🍫", image: "/menu/churros-csoki.jpeg", price: 1490 },
+      { name: "Churros Szamóca öntettel", desc: "Frissen sütött ropogós churros, édes szamóca öntettel (1, 7)", emoji: "🍓", image: "/menu/churros-szamoca.jpeg", price: 1490 },
+      { name: "PisztaCiao", desc: "Krémes pisztáciakrém, fehércsoki, tört pisztácia (1, 7, 8)", emoji: "💚", badge: "Kedvenc", image: "/menu/pisztaciao.jpeg", price: 2990 },
+      { name: "Sajttorta Szamóca öntettel", desc: "Lágy sajttorta, friss szamóca öntettel (1, 3, 7)", emoji: "🍰", image: "/menu/sajttorta.jpeg", price: 1290 },
+      { name: "Extra Csoki öntet", desc: "Adagnyi belga csokoládé öntet (7)", emoji: "🍫", image: "/menu/churros-csoki.jpeg", price: 350 },
+      { name: "Extra Szamóca öntet", desc: "Adagnyi szamóca öntet", emoji: "🍓", image: "/menu/churros-szamoca.jpeg", price: 350 },
     ],
   },
   {
@@ -101,12 +99,12 @@ const categories: { id: string; title: string; subtitle: string; items: Item[] }
     title: "Italok",
     subtitle: "Hideg üdítők a pizza mellé",
     items: [
-      { name: "Coca Cola", desc: "0,5 L palackos", emoji: "🥤", price: 750 },
-      { name: "Coca Cola Zero", desc: "0,5 L palackos", emoji: "🥤", price: 750 },
-      { name: "Fanta Narancs", desc: "0,5 L palackos", emoji: "🍊", price: 670 },
-      { name: "Sprite", desc: "0,5 L palackos", emoji: "🥤", price: 750 },
-      { name: "Fuzetea Barackos", desc: "0,5 L palackos jeges tea", emoji: "🍑", price: 750 },
-      { name: "Fuzetea Citromos", desc: "0,5 L palackos jeges tea", emoji: "🍋", price: 750 },
+      { name: "Coca Cola", desc: "0,5 L palackos", emoji: "🥤", image: "/menu/coca-cola.png", price: 750 },
+      { name: "Coca Cola Zero", desc: "0,5 L palackos", emoji: "🥤", image: "/menu/coca-zero.png", price: 750 },
+      { name: "Fanta Narancs", desc: "0,5 L palackos", emoji: "🍊", image: "/menu/fanta.png", price: 670 },
+      { name: "Sprite", desc: "0,5 L palackos", emoji: "🥤", image: "/menu/sprite.png", price: 750 },
+      { name: "Fuzetea Barackos", desc: "0,5 L palackos jeges tea", emoji: "🍑", image: "/menu/fuzetea-barack.png", price: 750 },
+      { name: "Fuzetea Citromos", desc: "0,5 L palackos jeges tea", emoji: "🍋", image: "/menu/fuzetea-citrom.png", price: 750 },
     ],
   },
 ];
@@ -180,18 +178,21 @@ function Card({ item, mobile }: { item: Item; mobile?: boolean }) {
 
       <MediaBlock item={item} />
 
-      <div className="p-5 flex-1 flex flex-col">
-        <h4 className="text-lg font-bold text-black mb-1.5" style={{ fontFamily: "var(--font-display)" }}>
+      <div className={`${mobile ? "p-5" : "p-3.5"} flex-1 flex flex-col`}>
+        <h4
+          className={`${mobile ? "text-lg" : "text-sm"} font-bold text-black mb-1 leading-tight`}
+          style={{ fontFamily: "var(--font-display)" }}
+        >
           {item.name}
         </h4>
-        <p className="text-sm text-zinc-600 leading-relaxed flex-1">
+        <p className={`${mobile ? "text-sm" : "text-xs"} text-zinc-600 leading-snug flex-1 line-clamp-3`}>
           {item.desc}
         </p>
-        <div className="mt-4 flex items-center justify-between gap-2">
-          <span className="text-lg font-bold brand-text-gradient">
+        <div className={`${mobile ? "mt-4" : "mt-3"} flex items-center justify-between gap-1.5`}>
+          <span className={`${mobile ? "text-lg" : "text-sm"} font-bold brand-text-gradient`}>
             {formatHUF(item.price)}
           </span>
-          <AddButton item={item} size={mobile ? "sm" : "md"} />
+          <AddButton item={item} size={mobile ? "sm" : "sm"} />
         </div>
       </div>
     </article>
@@ -246,7 +247,7 @@ export default function Menu() {
               </div>
 
               {/* Desktop grid */}
-              <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="hidden sm:grid sm:grid-cols-3 lg:grid-cols-5 gap-4">
                 {cat.items.map((item) => (
                   <Card key={item.name} item={item} />
                 ))}

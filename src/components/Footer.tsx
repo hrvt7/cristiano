@@ -15,9 +15,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12">
           <div>
             <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-full brand-gradient flex items-center justify-center text-white text-xl shadow-md">
-                🍕
-              </div>
+              <img
+                src="/cristiano-logo.jpg"
+                alt="Cristiano Pizzéria logo"
+                className="w-11 h-11 rounded-full object-cover shadow-md"
+              />
               <div>
                 <div className="text-2xl font-bold brand-text-gradient" style={{ fontFamily: "var(--font-display)" }}>
                   Cristiano

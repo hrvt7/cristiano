@@ -34,9 +34,11 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <a href="#" className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-full brand-gradient flex items-center justify-center text-white text-xl shadow-md border-2 border-white/60">
-              🍕
-            </div>
+            <img
+              src="/cristiano-logo.jpg"
+              alt="Cristiano Pizzéria logo"
+              className="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white/60"
+            />
             <div className="leading-none">
               <div
                 className={`text-2xl sm:text-3xl font-bold tracking-tight ${
