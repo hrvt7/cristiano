@@ -1,25 +1,23 @@
-import { Flame, Leaf, Clock, MapPin } from "lucide-react";
-
 const features = [
   {
-    icon: Flame,
+    video: "/about/fatuzeles.mp4",
     title: "Fatüzelésű olasz kemence",
     desc: "Pizzáinkat eredeti olaszországi fatüzelésű kemencében sütjük — ropogós szél, puha közepe, az az egyedi füstös íz.",
   },
   {
-    icon: Leaf,
+    video: "/about/olasz-alapanyag.mp4",
     title: "80% olasz alapanyag",
     desc: "Fior di Latte mozzarella, Grana Padano, Parma sonka, Gorgonzola — az alapanyagok 80%-a közvetlenül Olaszországból érkezik.",
   },
   {
-    icon: Clock,
+    video: "/about/gyors-kiszallitas.mp4",
     title: "Gyors kiszállítás",
     desc: "Szombathelyen 350 Ft szállítási díj, vidéken 900 Ft. Kiszállítási idő 60–90 perc. Személyes átvétel kb. 15 perc.",
   },
   {
-    icon: MapPin,
-    title: "Szombathely szívében",
-    desc: "Százhold utca 23. — barátságos hangulat, családias kiszolgálás. Gyere be, vagy rendelj telefonon.",
+    video: "/about/premium.mp4",
+    title: "Prémium minőség",
+    desc: "Friss, szezonális hozzávalók, kézműves tészta, házi készítésű szószok. Minden falatban ott a szenvedély és a minőség.",
   },
 ];
 
@@ -51,25 +49,34 @@ export default function About() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-5">
-            {features.map((f) => {
-              const Icon = f.icon;
-              return (
-                <div
-                  key={f.title}
-                  className="bg-gradient-to-br from-white to-cream border border-zinc-100 rounded-3xl p-6 hover:border-pink/30 transition-colors"
-                >
-                  <div className="w-12 h-12 rounded-2xl brand-gradient flex items-center justify-center mb-4 shadow-lg shadow-pink/20">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="font-bold text-black mb-2" style={{ fontFamily: "var(--font-display)" }}>
+            {features.map((f) => (
+              <div
+                key={f.title}
+                className="group bg-gradient-to-br from-white to-cream border border-zinc-100 rounded-3xl overflow-hidden hover:border-pink/30 transition-colors"
+              >
+                <div className="relative w-full aspect-video bg-black overflow-hidden">
+                  <video
+                    src={f.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3
+                    className="font-bold text-black mb-2"
+                    style={{ fontFamily: "var(--font-display)" }}
+                  >
                     {f.title}
                   </h3>
                   <p className="text-sm text-zinc-600 leading-relaxed">
                     {f.desc}
                   </p>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </div>
