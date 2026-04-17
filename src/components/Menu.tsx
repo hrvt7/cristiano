@@ -247,7 +247,11 @@ export default function Menu() {
               </div>
 
               {/* Desktop grid */}
-              <div className="hidden sm:grid sm:grid-cols-3 lg:grid-cols-5 gap-4">
+              <div
+                className={`hidden sm:grid sm:grid-cols-3 gap-4 ${
+                  cat.items.length <= 4 ? "lg:grid-cols-4" : "lg:grid-cols-5"
+                }`}
+              >
                 {cat.items.map((item) => (
                   <Card key={item.name} item={item} />
                 ))}
