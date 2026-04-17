@@ -26,10 +26,10 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
       </div>
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-28 md:h-36 z-10"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-48 md:h-64 z-10"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(255,247,242,0) 0%, rgba(255,247,242,0.35) 50%, rgba(255,247,242,0.75) 80%, var(--cream) 100%)",
+            "linear-gradient(to bottom, rgba(255,247,242,0) 0%, rgba(255,247,242,0.05) 20%, rgba(255,247,242,0.15) 40%, rgba(255,247,242,0.35) 60%, rgba(255,247,242,0.65) 80%, rgba(255,247,242,0.9) 95%, var(--cream) 100%)",
         }}
       />
 
