@@ -4,10 +4,14 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-black">
       <div className="absolute inset-0 -z-0">
-        <img
-          src="/pizza-hero.jpg"
-          alt="Fatüzelésű kemencében sütött Margherita pizza"
-          className="absolute inset-0 w-full h-full object-cover"
+        <video
+          src="/hero-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/pizza-hero.jpg"
+          className="absolute inset-0 w-full h-full object-contain lg:object-cover bg-black"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
