@@ -25,7 +25,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
       </div>
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 md:h-56 z-10 bg-gradient-to-b from-transparent to-[var(--cream)]" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 md:h-24 z-10 bg-gradient-to-b from-transparent to-[var(--cream)]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-52 pb-20 md:pt-40 md:pb-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
