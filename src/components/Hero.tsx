@@ -2,7 +2,7 @@ import { Phone, MapPin } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-black">
+    <section className="relative overflow-hidden bg-black -mt-20">
       <div className="absolute inset-0 -z-0">
         <video
           src="/hero-video.mp4"
@@ -11,14 +11,14 @@ export default function Hero() {
           muted
           playsInline
           poster="/pizza-hero.jpg"
-          className="absolute inset-0 w-full h-full object-contain lg:object-cover bg-black"
+          className="absolute inset-0 w-full h-full object-contain object-top lg:object-cover lg:object-center bg-black"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
       </div>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 md:h-56 z-10 bg-gradient-to-b from-transparent to-[var(--cream)]" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-32 pb-20 md:pt-40 md:pb-32">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-52 pb-20 md:pt-40 md:pb-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="fade-up text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-sm text-white text-xs font-semibold uppercase tracking-wider mb-6 border border-white/20">
