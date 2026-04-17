@@ -67,29 +67,16 @@ export default function Hero() {
           </div>
 
           <div className="relative fade-up hidden lg:block" style={{ animationDelay: "0.2s" }}>
-            <div className="relative aspect-square max-w-md mx-auto">
-              <div className="absolute inset-0 brand-gradient rounded-full rotate-6 opacity-25 blur-3xl" />
-              <div className="relative bg-white rounded-[3rem] shadow-2xl shadow-pink/30 overflow-hidden border-4 border-pink/20 aspect-square flex items-center justify-center p-10">
-                <div className="text-center">
-                  <div
-                    className="text-7xl font-bold brand-text-gradient"
-                    style={{ fontFamily: "var(--font-display)" }}
-                  >
-                    Cristiano
-                  </div>
-                  <div
-                    className="mt-2 text-2xl italic text-zinc-700"
-                    style={{ fontFamily: "var(--font-display)" }}
-                  >
-                    Pizzéria
-                  </div>
-                  <div className="mt-6 h-1 w-24 brand-gradient mx-auto rounded-full" />
-                  <div className="mt-6 text-xs uppercase tracking-[0.35em] text-zinc-500 font-semibold">
-                    Szombathely · 9700
-                  </div>
-                </div>
+            <div className="relative aspect-[4/5] max-w-md mx-auto">
+              <div className="absolute inset-0 brand-gradient rounded-[3rem] rotate-3 opacity-30 blur-3xl" />
+              <div className="relative bg-white rounded-[3rem] shadow-2xl shadow-pink/30 overflow-hidden border-4 border-pink/20 aspect-[4/5]">
+                <img
+                  src="/hero-profile.jpg"
+                  alt="Cristiano Pizzéria — nápolyi pizza"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
               </div>
-              <div className="absolute -top-4 -right-4 bg-black text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider rotate-12 shadow-xl">
+              <div className="absolute -top-4 -right-4 bg-black text-white px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider rotate-12 shadow-xl z-10">
                 🔥 Forró!
               </div>
             </div>
