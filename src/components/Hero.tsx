@@ -71,7 +71,7 @@ export default function Hero() {
           </div>
 
           <div className="relative fade-up hidden lg:block" style={{ animationDelay: "0.2s" }}>
-            <div className="relative aspect-[4/5] max-w-md mx-auto">
+            <div className="relative aspect-[4/5] max-w-xs mx-auto">
               <div className="absolute inset-0 brand-gradient rounded-[3rem] rotate-3 opacity-30 blur-3xl" />
               <div className="relative bg-white rounded-[3rem] shadow-2xl shadow-pink/30 overflow-hidden border-4 border-pink/20 aspect-[4/5]">
                 <img
