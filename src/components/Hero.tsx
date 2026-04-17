@@ -5,13 +5,22 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-black -mt-20">
       <div className="absolute inset-0 -z-0">
         <video
+          src="/hero-video-mobile.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/pizza-hero.jpg"
+          className="absolute inset-0 w-full h-full object-cover lg:hidden bg-black"
+        />
+        <video
           src="/hero-video.mp4"
           autoPlay
           loop
           muted
           playsInline
           poster="/pizza-hero.jpg"
-          className="absolute inset-0 w-full h-full object-contain object-top lg:object-cover lg:object-center bg-black"
+          className="absolute inset-0 w-full h-full object-cover hidden lg:block bg-black"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
