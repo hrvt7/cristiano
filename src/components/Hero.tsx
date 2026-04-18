@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 min-h-screen pt-40 pb-32 md:pt-32 md:pb-40 flex flex-col justify-center">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 min-h-[calc(100vh+5rem)] pt-40 pb-32 md:pt-32 md:pb-40 flex flex-col justify-center">
         <div className="max-w-3xl">
           <div className="fade-up text-center lg:text-left">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] text-white drop-shadow-xl">
