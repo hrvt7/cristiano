@@ -39,22 +39,22 @@ export default function Header() {
               alt="Cristiano Pizzéria logo"
               className="w-12 h-12 rounded-full object-cover shadow-md border-2 border-white/60"
             />
-            <div className="leading-none">
-              <div
-                className={`text-2xl sm:text-3xl font-bold tracking-tight ${
-                  transparent ? "text-white drop-shadow-md" : "text-black"
-                }`}
-                style={{ fontFamily: "var(--font-display)" }}
-              >
+            <div
+              className={`flex flex-col leading-none ${
+                transparent ? "text-white drop-shadow-md" : "text-black"
+              }`}
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              <span className="text-xl sm:text-2xl font-bold tracking-tight">
                 Cristiano
-              </div>
-              <div
-                className={`text-xs uppercase tracking-[0.3em] font-semibold mt-1 transition-colors ${
-                  transparent ? "text-white/80" : "text-pink-dark"
+              </span>
+              <span
+                className={`text-base sm:text-lg italic font-semibold -mt-0.5 ${
+                  transparent ? "text-white/90" : "text-pink-dark"
                 }`}
               >
                 Pizzéria
-              </div>
+              </span>
             </div>
           </a>
 
