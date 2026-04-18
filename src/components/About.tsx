@@ -61,6 +61,8 @@ export default function About() {
                     loop
                     muted
                     playsInline
+                    preload="auto"
+                    poster={f.video.replace(".mp4", "-poster.jpg")}
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                 </div>

@@ -10,7 +10,8 @@ export default function Hero() {
           loop
           muted
           playsInline
-          poster="/pizza-hero.jpg"
+          preload="auto"
+          poster="/hero-poster-mobile.jpg"
           className="absolute inset-0 w-full h-full object-cover lg:hidden bg-black"
         />
         <video
@@ -19,7 +20,8 @@ export default function Hero() {
           loop
           muted
           playsInline
-          poster="/pizza-hero.jpg"
+          preload="auto"
+          poster="/hero-poster.jpg"
           className="absolute inset-0 w-full h-full object-cover hidden lg:block bg-black"
         />
         <div className="absolute inset-0 bg-black/60" />
