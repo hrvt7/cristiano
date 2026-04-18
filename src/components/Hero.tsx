@@ -78,10 +78,10 @@ export default function Hero() {
         </div>
       </div>
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 md:h-32 z-10"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-10 md:h-14 z-10"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(255,247,242,0) 0%, rgba(255,247,242,0.25) 45%, rgba(255,247,242,0.7) 80%, var(--cream) 100%)",
+            "linear-gradient(to bottom, rgba(255,247,242,0) 0%, rgba(255,247,242,0.4) 60%, var(--cream) 100%)",
         }}
       />
     </section>
