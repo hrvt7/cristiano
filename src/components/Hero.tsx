@@ -75,10 +75,10 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative fade-up hidden lg:block" style={{ animationDelay: "0.2s" }}>
-            <div className="relative aspect-[9/16] max-w-xs mx-auto">
-              <div className="absolute inset-0 brand-gradient rounded-[3rem] rotate-3 opacity-30 blur-3xl" />
-              <div className="relative bg-white rounded-[3rem] shadow-2xl shadow-pink/30 overflow-hidden border-4 border-pink/20 aspect-[9/16]">
+          <div className="relative fade-up flex justify-center lg:justify-end" style={{ animationDelay: "0.2s" }}>
+            <div className="relative aspect-[9/16] w-44 sm:w-52 lg:w-60">
+              <div className="absolute inset-0 brand-gradient rounded-[2rem] rotate-3 opacity-30 blur-3xl" />
+              <div className="relative bg-white rounded-[2rem] shadow-2xl shadow-pink/30 overflow-hidden border-4 border-pink/20 aspect-[9/16]">
                 <img
                   src="/hero-profile.jpg"
                   alt="Cristiano Pizzéria — nápolyi pizza"
