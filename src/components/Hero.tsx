@@ -28,8 +28,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 min-h-screen pt-40 pb-20 md:pt-32 md:pb-24 flex flex-col justify-center">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 min-h-screen pt-40 pb-32 md:pt-32 md:pb-40 flex flex-col justify-center">
+        <div className="max-w-3xl">
           <div className="fade-up text-center lg:text-left">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] text-white drop-shadow-xl">
               <span className="block">Cristiano</span>
@@ -75,20 +75,15 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative fade-up flex justify-center lg:justify-end" style={{ animationDelay: "0.2s" }}>
-            <div className="relative aspect-[9/16] w-44 sm:w-52 lg:w-60">
-              <div className="absolute inset-0 brand-gradient rounded-[2rem] rotate-3 opacity-30 blur-3xl" />
-              <div className="relative bg-white rounded-[2rem] shadow-2xl shadow-pink/30 overflow-hidden border-4 border-pink/20 aspect-[9/16]">
-                <img
-                  src="/hero-profile.jpg"
-                  alt="Cristiano Pizzéria — nápolyi pizza"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 md:h-32 z-10"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(255,247,242,0) 0%, rgba(255,247,242,0.25) 45%, rgba(255,247,242,0.7) 80%, var(--cream) 100%)",
+        }}
+      />
     </section>
   );
 }
