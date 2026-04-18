@@ -25,15 +25,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
       </div>
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-20 md:h-28 z-10"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(255,247,242,0) 0%, rgba(255,247,242,0.3) 50%, rgba(255,247,242,0.75) 85%, var(--cream) 100%)",
-        }}
-      />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-40 pb-10 md:pt-32 md:pb-16">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 min-h-screen pt-40 pb-20 md:pt-32 md:pb-24 flex flex-col justify-center">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="fade-up text-center lg:text-left">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] text-white drop-shadow-xl">
